@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Satguru Everfresh</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css" media="screen">
+
+</head>
+<body>
+
+    <header>
+
+        <hgroup>
+            <h1>SATGURU EVERFRESH</h1>
+            <h2>#Fast #Food #for #Fast #Times</h2>
+        </hgroup>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="http://localhost:5000/">Home</a>
+                </li>
+                <li>
+                    <a href="http://localhost:5000/about">About</a>
+                </li>
+                <li>
+                    <a href="http://localhost:5000/contact">Contact</a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+    <section>
+        
+        <center>
+            {% for a in info %}
+            <form method="DELETE" action="deletedyourproductsecretly/{{a['name']}}">
+                
+                
+               <input type="submit" value="Click here to Delete {{a['name']}} Sandwich" />
+                
+                
+            </form>
+            {% endfor %}
+        </center>
+
+    </section>
+
+    <footer>
+
+        <small>Copyright © Satguru Everfresh</small>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="http://localhost:5000/">Home</a>
+                </li>
+                <li>
+                    <a href="http://localhost:5000/about">About</a>
+                </li>
+                <li>
+                    <a href="http://localhost:5000/contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+    </footer>
+</body>
+</html>

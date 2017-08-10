@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Confirm Order</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css" media="screen">
+</head>
+<body>
+    <header>
+
+        <hgroup>
+            <h1>SATGURU EVERFRESH</h1>
+            <h2>#Fast #Food #for #Fast #Times</h2>
+        </hgroup>
+
+        <nav>
+            <ul>
+                <li><a href="http://localhost:5000/">Home</a></li>
+                <li><a href="http://localhost:5000/about">About</a></li>
+                <li><a href="http://localhost:5000/contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section>
+        <article>
+            <center>
+                <h1>Only one step away to get happiness at your door step</h1>
+
+                
+
+                <h2>Hey! please get your order confirm </h2>
+
+
+                <br />
+
+                <h1>You have ordered!</h1>
+                {% for a in info %}
+
+                <figure>
+                    <a><img src={{a['img']}} width="304" height="228" /></a>
+                    <figcaption>
+                        <h1>{{a['name']}} Sandwich</h1><br />
+                        <h3>Rs.{{a['price']}}</h3>
+                        <h3>{{a['description']}}</h3>
+                    </figcaption>
+                </figure>
+                
+                
+
+                <form method="POST" action='{{a['name']}}/fetchcustomar'>
+                    
+                    <h1>Please Enter your Details to proceed</h1>
+                    <h3>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="text" name="cname" required/></h3>
+                    <h3>Delivery Address :&nbsp;<input type="text" name="add" required /></h3>
+                    <h3>Mob. No. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       : <input type="text" name="mob" required/></h3><br />
+                    <input type="submit" value="Confirm your order" />
+                </form>
+                {% endfor %}
+                
+            </center>
+        </article>
+    </section>
+    <footer>
+
+        <small>Copyright © Satguru Everfresh</small>
+
+        <nav>
+            <ul>
+                <li><a href="http://localhost:5000/">Home</a></li>
+                <li><a href="http://localhost:5000/about">About</a></li>
+                <li><a href="http://localhost:5000/contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </footer>
+
+</body>
+</html>

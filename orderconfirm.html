@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ordered</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:5000/static/style.css" media="screen">
+</head>
+<body>
+    <header>
+
+        <hgroup>
+            <h1>SATGURU EVERFRESH</h1>
+            <h2>#Fast #Food #for #Fast #Times</h2>
+        </hgroup>
+
+        <nav>
+            <ul>
+                <li><a href="http://localhost:5000/">Home</a></li>
+                <li><a href="http://localhost:5000/about">About</a></li>
+                <li><a href="http://localhost:5000/contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section>
+        <article>
+            <center>
+
+   
+                <br />
+
+                <h1>Your order is on the way!</h1><br />
+                <h1>It will be delivered shortly on-</h1>
+                {% for a in sandwich %}
+
+                <figure>
+                    <a><img src={{a['img']}} width="304" height="228" /></a>
+                    <figcaption>
+                        <h1>{{a['name']}} Sandwich</h1><br />
+                        <h3>Rs.{{a['price']}}</h3>
+                     </figcaption>
+                </figure>
+                {% endfor %}
+                {% for a in info%}
+                <h3>Name:-{{a['cname']}}</h3>
+                <h3>Address:-{{a['address']}}</h3>
+                <h3>Contact no.:-{{a['mob']}}</h3>
+                {% endfor %}
+
+                <a href="http://localhost:5000/"><input type="submit" value="Go back to home page" /></a>
+                
+                
+            </center>
+        </article>
+    </section>
+    <footer>
+
+        <small>Copyright © Satguru Everfresh</small>
+
+        <nav>
+            <ul>
+                <li><a href="http://localhost:5000/">Home</a></li>
+                <li><a href="http://localhost:5000/about">About</a></li>
+                <li><a href="http://localhost:5000/contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </footer>
+
+</body>
+</html>

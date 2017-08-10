@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Satguru Everfresh</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css" media="screen">
+
+</head>
+<body>
+
+    <header>
+
+        <hgroup>
+            <h1>SATGURU EVERFRESH</h1>
+            <h2>#Fast #Food #for #Fast #Times</h2>
+        </hgroup>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="http://localhost:5000/">Home</a>
+                </li>
+                <li>
+                    <a href="http://localhost:5000/about">About</a>
+                </li>
+                <li>
+                    <a href="http://localhost:5000/contact">Contact</a>
+                </li>
+            </ul>
+           </nav>
+
+    </header>
+
+    <section>
+
+        <article>
+
+            <center>
+                <h1>Congratulation your new product is added as</h1>
+
+
+
+                <br><br><br>
+                {% for a in new %}
+
+                <figure>
+                    <a><img src={{a['img']}}  width="304" height="228" /></a>
+                    <figcaption>
+                        <h1>{{a['name']}} Sandwich</h1><br />
+                        <h3>Rs.{{a['price']}}</h3>
+                        <h3>{{a['description']}}</h3>
+                    </figcaption>
+                </figure>
+                    <br />
+
+                    {% endfor %}
+                <a href="{{url_for('add')}}"><input type="submit" value="Add more" /></a>
+                <br />
+                <a href="http://localhost:5000/"><input type="submit" value="Go back to home page" /></a>
+            </center>
+            <aside>Satguru Everfresh is a shop esatblished in 1975 and since serveing with a Broad Variety of delicious Sandwhices . We belive in serving our customers with best quality and taste and also have value for money.  </aside>
+
+        </article>
+    </section>
+
+    <footer>
+
+        <small>Copyright © Satguru Everfresh</small>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="http://localhost:5000/">Home</a>
+                </li>
+                <li>
+                    <a href="http://localhost:5000/about">About</a>
+                </li>
+                <li>
+                    <a href="http://localhost:5000/contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+    </footer>
+</body>
+</html>
